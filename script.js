@@ -10,3 +10,5 @@ const dice = document.querySelector('.dice');
 const newButton = document.querySelector('.btn--new');
 const rollButton = document.querySelector('.btn--roll');
 const holdButton = document.querySelector('.btn--hold');
+
+const random = () => Math.trunc(Math.random() * 6) + 1;
