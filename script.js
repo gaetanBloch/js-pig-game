@@ -13,6 +13,11 @@ const holdButton = document.querySelector('.btn--hold');
 
 const random = () => Math.trunc(Math.random() * 6) + 1;
 
+let player1 = true;
 rollButton.addEventListener('click', () => {
-  dice.src = `dice-${random()}.png`;
+  const diceValue = random();
+  dice.src = `dice-${diceValue}.png`;
+  if (player1) {
+    currentPlayer1 = Number(currentPlayer1) + diceValue;
+  }
 });
