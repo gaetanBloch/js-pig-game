@@ -39,9 +39,11 @@ const addToScore = currentPlayer => {
 let isPlayer1 = true;
 
 rollButton.addEventListener('click', () => {
+  const dice = document.querySelector('.dice');
   const diceValue = random();
 
-  document.querySelector('.dice').src = `dice-${diceValue}.png`;
+  dice.style.display = 'block';
+  dice.src = `dice-${diceValue}.png`;
 
   if (diceValue === 1) {
     isPlayer1 = !isPlayer1;
