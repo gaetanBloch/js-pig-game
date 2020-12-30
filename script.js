@@ -12,3 +12,7 @@ const rollButton = document.querySelector('.btn--roll');
 const holdButton = document.querySelector('.btn--hold');
 
 const random = () => Math.trunc(Math.random() * 6) + 1;
+
+rollButton.addEventListener('click', () => {
+  dice.src = `dice-${random()}.png`;
+});
