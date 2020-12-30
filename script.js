@@ -11,13 +11,22 @@ const newButton = document.querySelector('.btn--new');
 const rollButton = document.querySelector('.btn--roll');
 const holdButton = document.querySelector('.btn--hold');
 
+const WIN_VALUE = 100;
+
 const random = () => Math.trunc(Math.random() * 6) + 1;
 
-let player1 = true;
+let isPlayer1 = true;
 rollButton.addEventListener('click', () => {
   const diceValue = random();
+  const current1Text = currentPlayer1.textContent;
+  const current2Text = currentPlayer2.textContent;
+
   dice.src = `dice-${diceValue}.png`;
-  if (player1) {
-    currentPlayer1 = Number(currentPlayer1) + diceValue;
+
+  if (isPlayer1) {
+    currentPlayer1.textContent = Number(current1Text) + diceValue;
+  } else {
+    currentPlayer2.textContent = Number(current2Text) + diceValue;
   }
+  isPlayer1 != isPlayer1;
 });
